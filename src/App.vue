@@ -14,8 +14,20 @@ import Card from './components/ui/Card.vue';
     </p>
 
     <nav class="space-x-2">
-      <RouterLink to="/" class="hover:underline">Home</RouterLink>
-      <RouterLink to="/about" class="hover:underline">About</RouterLink>
+      <RouterLink
+        to="/"
+        class="hover:underline hover:text-blue-500 hover:font-semibold"
+        active-class="underline text-blue-500"
+      >
+        Home
+      </RouterLink>
+      <RouterLink
+        to="/about"
+        class="hover:underline hover:text-blue-500 hover:font-semibold"
+        active-class="underline text-blue-500"
+      >
+        About
+      </RouterLink>
     </nav>
 
     <main>
