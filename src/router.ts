@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
 
-import HomeView from './components/home/HomeView.vue';
+import HomeView from './home/HomeView.vue';
 
 const routes: Readonly<RouteRecordRaw[]> = [
   { path: '/', component: HomeView },
-  { path: '/about', component: () => import('./components/about/AboutView.vue') }
+  { path: '/about', component: () => import('./about/AboutView.vue') }
 ];
 
 const router = createRouter({
