@@ -10,7 +10,7 @@ const route = useRoute();
 const search = computed({
   get: () => route.query.search as string ?? '',
   set: (value: string) => {
-    router.push({ query: { search: value } });
+    router.push({ query: { search: value }, replace: true });
   }
 });
 </script>
