@@ -26,5 +26,4 @@ const classes = computed(() => {
 </template>
 
 <style scoped>
-
 </style>

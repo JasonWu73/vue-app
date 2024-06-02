@@ -20,5 +20,4 @@
 </template>
 
 <style scoped>
-
 </style>
