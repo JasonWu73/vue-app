@@ -8,6 +8,7 @@ import Card from './components/ui/Card.vue';
       <h1 class="text-4xl">Vue Component</h1>
     </template>
 
+    <RouterView/>
   </Card>
 </template>
 
