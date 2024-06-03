@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import { provide } from 'vue';
 import Card from './shared/components/ui/Card.vue';
+
+provide('users', [
+  { id: 1000, name: 'Jason Wu', age: 33 },
+  { id: 1001, name: '吴仙杰', age: 25 },
+  { id: 1002, name: 'Bruce Lee', age: 18 }
+]);
 </script>
 
 <template>
@@ -27,6 +34,13 @@ import Card from './shared/components/ui/Card.vue';
         active-class="underline text-blue-500"
       >
         About
+      </RouterLink>
+      <RouterLink
+        to="/about/1000"
+        class="hover:underline hover:text-blue-500 hover:font-semibold"
+        active-class="underline text-blue-500"
+      >
+        About/1000
       </RouterLink>
     </nav>
 
