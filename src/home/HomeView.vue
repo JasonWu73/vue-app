@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { useCounterStore } from '../shared/stores/counter.ts';
-import Button from '../shared/components/ui/Button.vue';
+import { useCounterStore } from '@/shared/stores/counter.ts';
+import Button from '@/shared/components/ui/Button.vue';
 
 const router = useRouter();
 const store = useCounterStore();

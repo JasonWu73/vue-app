@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { provide } from 'vue';
-import Card from './shared/components/ui/Card.vue';
+import Card from '@/shared/components/ui/Card.vue';
 
 provide('users', [
   { id: 1000, name: 'Jason Wu', age: 33 },

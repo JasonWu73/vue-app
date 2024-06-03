@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { useCounterStore } from '../shared/stores/counter.ts';
-import Button from '../shared/components/ui/Button.vue';
-import Input from '../shared/components/ui/Input.vue';
+import { useCounterStore } from '@/shared/stores/counter.ts';
+import Button from '@/shared/components/ui/Button.vue';
+import Input from '@/shared/components/ui/Input.vue';
 
 const router = useRouter();
 const route = useRoute();
