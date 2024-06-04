@@ -1,64 +1,6 @@
 @tailwind base;
-
-@layer base {
-  /* 自定义 CSS 变量 */
-  :root {
-
-    /* one-dark: `#282c34` */
-    /* `rgb(40 44 52 / <alpha-value>)` */
-    --color-one-dark: 40 44 52;
-
-    /* one-dark-1: `#22252a` */
-    /* `rgb(34 37 42 / <alpha-value>)` */
-    --color-one-dark-1: 34 37 42;
-
-    /* one-dark-2: `#1a1c20` */
-    /* `rgb(26 28 32 / <alpha-value>)` */
-    --color-one-dark-2: 26 28 32;
-
-    /* dark-selection: `#404859` */
-    /* `rgb(64 72 89 / <alpha-value>)` */
-    --color-dark-selection: 64 72 89;
-  }
-
-  /* ----- 自定义标题的预设样式 ----- */
-  h1 {
-    @apply text-xl;
-    @apply font-semibold;
-  }
-
-  h2 {
-    @apply text-lg;
-    @apply font-semibold;
-  }
-
-  h3 {
-    @apply text-base;
-    @apply font-semibold;
-  }
-}
-
 @tailwind components;
 @tailwind utilities;
-
-/* ----- 系统主题 ----- */
-/* 浅色主题 */
-html {
-  @apply text-slate-900;
-  @apply bg-white;
-
-  /* 滚动条浅色主题 */
-  color-scheme: light;
-}
-
-/* 深色主题 */
-html.dark {
-  @apply text-slate-200;
-  @apply bg-one-dark;
-
-  /* 滚动条深色主题 */
-  color-scheme: dark;
-}
 
 /* ----- NProgress 浅色主题样式 ----- */
 #nprogress .bar {

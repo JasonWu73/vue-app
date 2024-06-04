@@ -67,9 +67,9 @@ export async function sendRequest<TData, TError>({
   bodyData
 }: ApiRequest): Promise<ApiResponse<TData, TError>> {
   try {
-    const targetUrl = mergeUrlWithParams(url, urlParams);
     startNProgress();
-    const response = await fetch(targetUrl, {
+
+    const response = await fetch(mergeUrlWithParams(url, urlParams), {
       method,
       headers: getHeaders(headers, contentType),
       body: getBody(bodyData, contentType)
@@ -103,6 +103,7 @@ function getHeaders(headers: Headers, contentType?: ContentType) {
   };
   const contentTypeValue = getContentTypeValue(contentType);
   if (!contentTypeValue) return jsonAcceptHeaders;
+
   return {
     ...jsonAcceptHeaders,
     'Content-Type': contentTypeValue
@@ -128,6 +129,7 @@ function getContentTypeValue(contentType?: ContentType) {
 
 function getBody(bodyData?: BodyData, contentType?: ContentType) {
   if (!bodyData) return undefined;
+
   switch (contentType) {
     case 'FILE': {
       return bodyData as FormData;

@@ -77,10 +77,13 @@ export function isLinux(): boolean {
  */
 export function mergeUrlWithParams(url: string, params?: UrlParams): string {
   if (!params) return url;
+
   const urlObject = new URL(url);
+
   Object.keys(params).forEach(key => {
     const value = params[key];
     urlObject.searchParams.append(key, value ? String(value) : '');
   });
+
   return urlObject.toString();
 }

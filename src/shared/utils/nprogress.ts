@@ -31,6 +31,7 @@ export function startNProgress() {
 export function endNProgress() {
   counter--;
   if (counter > 0) return;
+
   counter = 0;
   NProgress.done();
 }
