@@ -18,16 +18,16 @@
 }
 
 /* ----- NProgress 深色主题样式 ----- */
-html.dark #nprogress .bar {
+html[data-theme="dracula"] #nprogress .bar {
   background-color: theme('colors.rose.500');
 }
 
-html.dark #nprogress .peg {
+html[data-theme="dracula"] #nprogress .peg {
   box-shadow: 0 0 10px theme('colors.rose.500'),
   0 0 5px theme('colors.rose.500');
 }
 
-html.dark #nprogress .spinner-icon {
+html[data-theme="dracula"] #nprogress .spinner-icon {
   border-top-color: theme('colors.rose.500');
   border-left-color: theme('colors.rose.500');
 }
