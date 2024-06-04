@@ -1,6 +1,8 @@
 import clsx, { type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
+export type UrlParams = Record<string, string | number | null | undefined>;
+
 /**
  * 合并 Tailwind CSS 类名。
  *
@@ -36,7 +38,7 @@ export function truncate(value: string, maxlength: number): string {
  * @returns {Promise<void>} 等待指定秒数后，返回一个空的 `Promise` 对象
  */
 export function wait(seconds: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+  return new Promise(resolve => window.setTimeout(resolve, seconds * 1000));
 }
 
 /**
@@ -64,4 +66,21 @@ export function isWindows(): boolean {
  */
 export function isLinux(): boolean {
   return window.navigator.userAgent.toLowerCase().search('linux') !== -1;
+}
+
+/**
+ * 将 URL 地址与 URL 参数合并。
+ *
+ * @param url URL 地址
+ * @param params URL 参数
+ * @returns {string} 合并后的 URL 地址
+ */
+export function mergeUrlWithParams(url: string, params?: UrlParams): string {
+  if (!params) return url;
+  const urlObject = new URL(url);
+  Object.keys(params).forEach(key => {
+    const value = params[key];
+    urlObject.searchParams.append(key, value ? String(value) : '');
+  });
+  return urlObject.toString();
 }

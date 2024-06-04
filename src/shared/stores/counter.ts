@@ -17,5 +17,5 @@ export const useCounterStore = defineStore('counter', () => {
 });
 
 function wait(seconds: number) {
-  return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+  return new Promise(resolve => window.setTimeout(resolve, seconds * 1000));
 }
